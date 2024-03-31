@@ -1,7 +1,8 @@
 pub mod  cpu;
+pub mod memory;
 fn main() {
     println!("Hello, world!");
-    let mut cpu = cpu::cpu::CPU::new();
+    let mut cpu = cpu::CPU::new();
     let instruction:u32 = 0b00010000000000000000000010010011;
     cpu.memory.write(0x200, (instruction & 0xFF) as u8);
     cpu.memory.write(0x201, ((instruction >> 8) & 0xFF) as u8);
