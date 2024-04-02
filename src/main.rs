@@ -1,8 +1,6 @@
-pub mod  cpu;
-pub mod memory;
-
-
+use rust_cpu::cpu;
 use env_logger::Builder;
+
 fn main() {
     Builder::new().filter(None, log::LevelFilter::Debug).init();
     let mut cpu = cpu::CPU::new();
